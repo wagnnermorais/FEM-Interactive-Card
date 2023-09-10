@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
 
 :root {
-  --primary-gradient: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+  --primary-blue: hsl(249, 99%, 64%);
+  --primary-purple: hsl(278, 94%, 30%);
+  --primary-gradient: --primary-blue, --primary-purple;
   --primary-red: hsl(0, 100%, 66%);
   --neutral-white: hsl(0, 0%, 100%);
   --neutral-light-grayish-violet: hsl(270, 3%, 87%);
@@ -26,13 +28,48 @@
   min-height: 100vh;
 }
 
+.hide {
+  display: none;
+}
+
+.card-signed {
+  text-align: center;
+  width: 40%;
+}
+
+.message-box {
+  margin: 1rem 0 0;
+}
+
+.message-box h1 {
+  margin: 1rem 0;
+  text-transform: var(--text-format);
+  color: var(--very-dark-violet);
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.message-box p {
+  color: var(--dark-grayish-violet);
+}
+
 .bg-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-image: url("/bg-main-desktop.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100dvh;
   width: 40%;
+}
+
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
 }
 
 .card {
@@ -83,4 +120,80 @@
   bottom: -0.55rem;
   letter-spacing: 1px;
   color: var(--neutral-white);
+}
+
+form {
+  width: 50%;
+}
+
+.input-box {
+  margin: 2rem 0;
+}
+
+.form-label {
+  font-size: calc(var(--main-fs) - 5px);
+  text-transform: var(--text-format);
+  letter-spacing: 2px;
+}
+
+.form-input {
+  display: flex;
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding: 0.8rem 1rem;
+  font-size: var(--main-fs);
+  border: 1px solid var(--neutral-light-grayish-violet);
+  border-radius: 10px;
+  transition: all 0.25s;
+}
+
+.form-input:focus {
+  outline: 1px solid var(--primary-blue);
+}
+
+.form-input:hover {
+  background: #f6f6f6;
+}
+
+.form-input::placeholder {
+  font-size: calc(var(--main-fs) - 2px);
+  color: var(--neutral-light-grayish-violet);
+}
+
+.columns-input {
+  display: flex;
+  gap: 1rem;
+}
+
+.columns-input-box {
+  width: 50%;
+}
+
+.date-box {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button-box {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 0;
+}
+
+input[type="submit"],
+.button-box button {
+  padding: 0.8rem 1rem;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: var(--very-dark-violet);
+  color: var(--neutral-white);
+  font-size: calc(var(--main-fs) - 2px);
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+input[type="submit"]:hover,
+.button-box button:hover {
+  background: hsl(278, 71%, 31%);
 }
