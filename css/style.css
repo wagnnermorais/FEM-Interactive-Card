@@ -25,6 +25,7 @@
 #app {
   display: flex;
   align-items: center;
+  gap: 5rem;
   min-height: 100vh;
 }
 
@@ -62,14 +63,14 @@
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100dvh;
-  width: 40%;
+  width: 30%;
 }
 
 .main-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60%;
+  width: 70%;
 }
 
 .card {
@@ -85,11 +86,15 @@
 
 .front-card {
   background-image: url("/bg-card-front.png");
+  position: relative;
+  left: 6.5rem;
 }
 
 .back-card {
   background-image: url("/bg-card-back.png");
   padding: 6.5rem 0;
+  position: relative;
+  left: 11.5rem;
 }
 
 .card-number {
@@ -180,8 +185,7 @@ form {
   margin: 2rem 0 0;
 }
 
-input[type="submit"],
-.button-box button {
+.submit-button {
   padding: 0.8rem 1rem;
   width: 100%;
   border: none;
@@ -193,7 +197,10 @@ input[type="submit"],
   transition: 0.25s;
 }
 
-input[type="submit"]:hover,
-.button-box button:hover {
+.submit-button:hover {
   background: hsl(278, 71%, 31%);
+}
+
+.date {
+  display: flex;
 }
