@@ -29,7 +29,7 @@
         </div>
       </section>
       <section class="main-content">
-        <form action="#">
+        <form action="#" class="">
           <div class="input-box">
             <label for="holder" class="form-label">Cardholder Name</label>
             <input
@@ -51,30 +51,46 @@
             />
           </div>
           <div class="columns-input">
-            <label for="date">Exp. Date (MM/YY)</label>
-            <input
-              type="text"
-              class="form-input"
-              name="date"
-              id="month"
-              placeholder="MM"
-            />
-            <input
-              type="text"
-              class="form-input"
-              placeholder="YY"
-              name="date"
-              id="year"
-            />
-          </div>
-          <div class="input-box">
-            <label for="" class="form-label"></label>
-            <input type="text" class="form-input" placeholder="e.g. 123" />
+            <div class="columns-input-box">
+              <label for="date" class="form-label">Exp. Date (MM/YY)</label>
+              <div class="date-box">
+                <input
+                  type="text"
+                  class="form-input"
+                  name="date"
+                  id="month"
+                  placeholder="MM"
+                />
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="YY"
+                  name="date"
+                  id="year"
+                />
+              </div>
+            </div>
+            <div class="columns-input-box">
+              <label for="" class="form-label">CVC</label>
+              <input type="text" class="form-input" placeholder="e.g. 123" />
+            </div>
           </div>
           <div class="button-box">
             <input type="submit" value="Confirm" />
           </div>
         </form>
+        <div class="card-signed hide">
+          <div class="image-box">
+            <img src="./icon-complete.svg" alt="Complete icon" />
+          </div>
+          <div class="message-box">
+            <h1>Thank you!</h1>
+            <p>We've added your card details.</p>
+          </div>
+          <div class="button-box">
+            <button type="button">Continue</button>
+          </div>
+        </div>
       </section>
     </main>
     <script type="module" src="/main.js"></script>
