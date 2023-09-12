@@ -85,8 +85,6 @@ function validForm() {
     : setError(cvcError, "Can't be blank");
 
   if (!isError) {
-    frontCard.classList.add("hide");
-    backCard.classList.add("hide");
     form.classList.add("hide");
     showSuccess.classList.remove("hide");
   }
