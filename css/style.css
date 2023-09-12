@@ -33,27 +33,6 @@
   display: none !important;
 }
 
-.card-signed {
-  text-align: center;
-  width: 40%;
-}
-
-.message-box {
-  margin: 1rem 0 0;
-}
-
-.message-box h1 {
-  margin: 1rem 0;
-  text-transform: var(--text-format);
-  color: var(--very-dark-violet);
-  letter-spacing: 4px;
-  font-weight: 500;
-}
-
-.message-box p {
-  color: var(--dark-grayish-violet);
-}
-
 .bg-section {
   display: flex;
   justify-content: center;
@@ -115,6 +94,10 @@
   text-transform: var(--text-format);
 }
 
+.date {
+  display: flex;
+}
+
 .cvc {
   position: relative;
 }
@@ -165,6 +148,10 @@ form {
   color: var(--neutral-light-grayish-violet);
 }
 
+#form-card-holder {
+  text-transform: capitalize;
+}
+
 .columns-input {
   display: flex;
   gap: 1rem;
@@ -177,10 +164,6 @@ form {
 .date-box {
   display: flex;
   gap: 0.5rem;
-}
-
-.date-box small {
-  display: block;
 }
 
 .button-box {
@@ -205,27 +188,41 @@ form {
   background: hsl(278, 71%, 31%);
 }
 
-.date {
-  display: flex;
-}
-
-#form-card-holder {
-  text-transform: capitalize;
-}
-
 small {
   color: var(--primary-red);
   font-weight: 700;
 }
 
-@media screen and (max-width: 375px) {
+.card-signed {
+  text-align: center;
+  width: 40%;
+}
+
+.message-box {
+  margin: 1rem 0 0;
+}
+
+.message-box h1 {
+  margin: 1rem 0;
+  text-transform: var(--text-format);
+  color: var(--very-dark-violet);
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.message-box p {
+  color: var(--dark-grayish-violet);
+}
+
+@media screen and (max-width: 600px) and (min-width: 375px) {
   #app {
     display: block;
   }
 
   .card-signed {
     text-align: center;
-    width: 40%;
+    width: 80%;
+    margin: 3.5rem auto 0;
   }
 
   .message-box {
@@ -233,94 +230,74 @@ small {
   }
 
   .message-box h1 {
-    margin: 1rem 0;
-    text-transform: var(--text-format);
-    color: var(--very-dark-violet);
-    letter-spacing: 4px;
-    font-weight: 500;
+    margin: 2rem 0 1rem;
   }
 
   .message-box p {
-    color: var(--dark-grayish-violet);
+    margin: 0 0 3rem;
   }
 
   .bg-section {
     display: block;
-    background-image: url("/bg-main-desktop.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     width: 100%;
-    min-height: 40vh;
-    margin: 1rem 0;
+    min-height: auto;
+    margin: -6rem 0 !important;
   }
 
   .main-content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
+    min-height: 70dvh;
+    margin: 10rem 0 2rem;
   }
 
   .card {
-    width: 20rem;
+    width: 19rem;
     margin: 1rem auto;
-    padding: 1rem;
-    background-size: cover;
-    background-position: center;
-    border: none;
-    border-radius: 10px;
-    color: var(--neutral-white);
+    padding: 1.5rem 1rem;
   }
 
   .front-card {
     background-image: url("/bg-card-front.png");
     position: relative;
-    left: 0;
+    left: -10px;
+    top: 15rem;
+    z-index: 9;
   }
 
   .back-card {
     background-image: url("/bg-card-back.png");
-    padding: 6.5rem 0;
-    position: relative;
-    left: 0;
+    padding: 5.5rem 0;
+    left: 1rem;
+    bottom: 3.75rem;
+    z-index: 1;
   }
 
   .card-number {
-    margin: 3rem 0 1rem;
+    margin: 2rem 0 1rem;
     font-size: calc(var(--main-fs) - 2px);
-    letter-spacing: 4px;
-  }
-
-  .card-holder-details {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0 0;
-    letter-spacing: 2px;
   }
 
   .card-holder-details p {
+    font-size: calc(var(--main-fs) - 5px);
     text-transform: var(--text-format);
   }
 
-  .cvc {
-    position: relative;
-  }
-
   .cvc-number {
-    position: absolute;
-    right: 3rem;
-    bottom: -0.55rem;
-    letter-spacing: 1px;
-    color: var(--neutral-white);
+    font-size: calc(var(--main-fs) - 4px);
+    right: 2.25rem;
+    bottom: -0.45rem;
   }
 
   form {
-    margin: 2.5rem auto;
-    width: 80%;
+    margin: 0 auto;
+    width: 90%;
   }
 
   .form-label {
-    font-size: calc(var(--main-fs) - 6px);
+    font-size: calc(var(--main-fs) - 4px);
   }
 
   .form-input::placeholder {
@@ -332,6 +309,7 @@ small {
   }
 
   .submit-button {
+    margin: 0;
     padding: 1rem;
     font-size: var(--main-fs);
   }
