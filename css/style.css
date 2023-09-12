@@ -30,7 +30,7 @@
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .card-signed {
@@ -144,7 +144,7 @@ form {
 .form-input {
   display: flex;
   width: 100%;
-  margin: 0.5rem 0 0;
+  margin: 0.5rem 0;
   padding: 0.8rem 1rem;
   font-size: var(--main-fs);
   border: 1px solid var(--neutral-light-grayish-violet);
@@ -179,6 +179,10 @@ form {
   gap: 0.5rem;
 }
 
+.date-box small {
+  display: block;
+}
+
 .button-box {
   display: flex;
   justify-content: center;
@@ -203,4 +207,13 @@ form {
 
 .date {
   display: flex;
+}
+
+#form-card-holder {
+  text-transform: capitalize;
+}
+
+small {
+  color: var(--primary-red);
+  font-weight: 700;
 }
