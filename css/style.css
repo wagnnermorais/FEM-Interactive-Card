@@ -217,3 +217,122 @@ small {
   color: var(--primary-red);
   font-weight: 700;
 }
+
+@media screen and (max-width: 375px) {
+  #app {
+    display: block;
+  }
+
+  .card-signed {
+    text-align: center;
+    width: 40%;
+  }
+
+  .message-box {
+    margin: 1rem 0 0;
+  }
+
+  .message-box h1 {
+    margin: 1rem 0;
+    text-transform: var(--text-format);
+    color: var(--very-dark-violet);
+    letter-spacing: 4px;
+    font-weight: 500;
+  }
+
+  .message-box p {
+    color: var(--dark-grayish-violet);
+  }
+
+  .bg-section {
+    display: block;
+    background-image: url("/bg-main-desktop.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 40vh;
+    margin: 1rem 0;
+  }
+
+  .main-content {
+    display: block;
+    width: 100%;
+  }
+
+  .card {
+    width: 20rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    border-radius: 10px;
+    color: var(--neutral-white);
+  }
+
+  .front-card {
+    background-image: url("/bg-card-front.png");
+    position: relative;
+    left: 0;
+  }
+
+  .back-card {
+    background-image: url("/bg-card-back.png");
+    padding: 6.5rem 0;
+    position: relative;
+    left: 0;
+  }
+
+  .card-number {
+    margin: 3rem 0 1rem;
+    font-size: calc(var(--main-fs) - 2px);
+    letter-spacing: 4px;
+  }
+
+  .card-holder-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem 0 0;
+    letter-spacing: 2px;
+  }
+
+  .card-holder-details p {
+    text-transform: var(--text-format);
+  }
+
+  .cvc {
+    position: relative;
+  }
+
+  .cvc-number {
+    position: absolute;
+    right: 3rem;
+    bottom: -0.55rem;
+    letter-spacing: 1px;
+    color: var(--neutral-white);
+  }
+
+  form {
+    margin: 2.5rem auto;
+    width: 80%;
+  }
+
+  .form-label {
+    font-size: calc(var(--main-fs) - 6px);
+  }
+
+  .form-input::placeholder {
+    font-size: var(--main-fs);
+  }
+
+  .button-box {
+    margin: 1rem 0 0;
+  }
+
+  .submit-button {
+    padding: 1rem;
+    font-size: var(--main-fs);
+  }
+}
