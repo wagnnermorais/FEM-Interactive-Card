@@ -92,10 +92,6 @@ function validForm() {
   }
 }
 
-function backToHome() {
-  console.log("clicou");
-}
-
 addValue(formHolder, cardHolder);
 formatteCardNumber(formNumber, cardNumber);
 addValue(formMonth, cardMonth);
